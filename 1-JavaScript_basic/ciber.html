@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Bàsic</title>
+    <style>
+      * {
+        margin: 20px;
+      }
+      .link {
+        text-decoration: none;
+      }
+      .link h2 {
+        font-size: xx-large;
+        margin: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 300px;
+        text-align: center;
+        color: rgb(185, 0, 37);
+        border: rgb(185, 0, 37) solid 1px;
+      }
+      .link h2:hover {
+        transition-duration: 0.5s;
+        color: white;
+        background-color: orange;
+        border: black solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: forestgreen">Javascript Bàsic</h1>
+    <!-- NIVELL 1 -->
+    <h2 style="color: crimson">Nivell 1</h2>
+    <!-- exercici 1 -->
+    <h4>Exercici 1</h4>
+    <p>
+      L'exercici consisteix a crear un fitxer anomenat ciber.html i mostrar per
+      consola un 'Hola mundo'.
+    </p>
+    <!-- exercici 2 -->
+    <h4>Exercici 2</h4>
+    <p>Crea un alert que mostri el teu nom.</p>
+    <!-- exercici 3 -->
+    <h4>Exercici 3</h4>
+    <p>
+      Crea una variable que contingui el teu nom i un altre que contingui el teu
+      cognom.
+    </p>
+    <!-- exercici 4 -->
+    <h4>Exercici 4</h4>
+    <p>Crea dos variables amb dos números i fes una suma entre ells.</p>
+    <!-- exercici 5 -->
+    <h4>Exercici 5</h4>
+    <p>
+      Crea una variable nota_examen juntament amb un alert que ens digui si
+      l’examen ha estat aprovat o no juntament amb la nota. (caldrà utilitzar un
+      condicional IF)
+    </p>
+    <!-- exercici 6 -->
+    <h4>Exercici 6</h4>
+    <p>
+      Reemplaça la paraula blau per la paraula verd del següent text
+      <b>Tinc un cotxe de color blau.</b> Després intenta fer-ho remplaçant les
+      o per les u.
+    </p>
+    <!-- exercici 7 -->
+    <h4>Exercici 7</h4>
+    <p>
+      Donat el seguit llistat d'objectes 'taula', 'cadira', 'ordinador',
+      'libreta', per un bucle que mostri per pantalla cada objecte i la seva
+      posició al llistat.
+    </p>
+    <!-- exercici 8 -->
+    <h4>Exercici 8</h4>
+    <p>
+      Crea una funció anomenada calculadora que tingui com a entrada els
+      següents paràmetres: operador, valor1 i valor2. Estructura de la funció
+      que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar
+      per pantalla.
+    </p>
+
+    <p id="operador"></p>
+    <p id="num1"></p>
+    <p id="num2"></p>
+    <p>El resultat és...</p>
+    <h4 id="resultat"></h4>
+    <input
+      type="button"
+      onClick="start()"
+      value="Començar"
+      style="background-color: rgb(149, 231, 204); color: midnightblue"
+    />
+    <!-- NIVELL 2 -->
+    <h2 style="color: crimson">Nivell 2</h2>
+    <p>
+      Aprofita la funció "calculadora" de l'exercici anterior per crear una
+      calculadora completa amb opcions per sumar, restar, multiplicar i dividir.
+      Hauràs de controlar el Zero com a denominador d'una divisió.
+    </p>
+    <p id="operadorN2"></p>
+    <p id="num1N2"></p>
+    <p id="num2N2"></p>
+    <p>El resultat és...</p>
+    <h4 id="resultatN2"></h4>
+    <input
+      type="button"
+      onClick="startN2()"
+      value="Començar"
+      style="background-color: rgb(240, 150, 225); color: rgb(84, 25, 112)"
+    />
+    <!-- NIVELL 3 -->
+    <h2 style="color: crimson">Nivell 3</h2>
+    <p>
+      Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de
+      fer la calculadora més usable. El disseny és totalment lliure, intenta
+      sorprendre al teu mentor.
+    </p>
+
+    <a class="link" href="calculadora/calculadora.html"
+      ><h2>Obrir Calculadora</h2></a
+    >
+
+    <script>
+      // N1E1
+      console.log("Hola mundo!");
+
+      // N1E2
+      alert("Em dic Adrià!");
+
+      // N1E3
+      let nom = "Adrià";
+      let cognom = "Subirana";
+      console.log("Em dic " + nom + " " + cognom);
+
+      // N1E4
+      let num1 = 34;
+      let num2 = 56;
+      let resultat = num1 + num2;
+      console.log(
+        "La suma dels números " +
+          num1 +
+          " i " +
+          num2 +
+          " és igual a " +
+          resultat
+      );
+
+      // N1E5
+      let nota_examen = Number(
+        window.prompt(
+          "Digues la nota del teu examen i et dic si l'has aprobat!"
+        )
+      );
+      if (nota_examen >= 5) {
+        alert(
+          "La teva nota és de " + nota_examen + " punts: Has aprobat l'examen!"
+        );
+      } else {
+        alert(
+          "La teva nota és de " +
+            nota_examen +
+            " punts: NO has aprobat l'examen!"
+        );
+      }
+      // N1E6
+      let frase = "Tinc un cotxe de color blau.";
+      let esVerd = frase.replace("blau", "verd");
+      let ambLaU = frase.replaceAll("o", "u");
+      console.log(esVerd);
+      console.log(ambLaU);
+      // N1E7
+      let arrayObjectes = ["taula", "cadira", "ordinador", "llibreta"];
+      let i;
+      for (i = 0; i < arrayObjectes.length; i++) {
+        console.log(
+          "L'objecte " + arrayObjectes[i] + " està a la posició " + i
+        );
+      }
+      // N1E8
+
+      function start() {
+        let operador = window.prompt("Triar l'operador:  +  -  * ");
+        let valor1 = parseInt(window.prompt("Tria el primer número"));
+        let valor2 = parseInt(window.prompt("Tria el segon número"));
+        let resultat = calculadora(operador, valor1, valor2);
+
+        function calculadora(op, v1, v2) {
+          switch (op) {
+            case "+":
+              return v1 + v2;
+              break;
+            case "-":
+              return v1 - v2;
+              break;
+            case "*":
+              return v1 * v2;
+              break;
+            default:
+              return "Quelcom ha sortit malament, verifica la informació aportada.";
+          }
+        }
+        document.getElementById("operador").innerHTML =
+          "El teu operador és: " + operador;
+        document.getElementById("num1").innerHTML =
+          "El teu primer número és: " + valor1;
+        document.getElementById("num2").innerHTML =
+          "El teu segon número és: " + valor2;
+        document.getElementById("resultat").innerHTML = resultat;
+      }
+      // Nivell 2
+      function startN2() {
+        let operadorN2 = window.prompt("Triar l'operador:  +  -  * ");
+        let valor1N2 = parseInt(window.prompt("Tria el primer número"));
+        let valor2N2 = parseInt(window.prompt("Tria el segon número"));
+        let resultatN2 = calculadora(operadorN2, valor1N2, valor2N2);
+
+        function calculadora(opN2, v1N2, v2N2) {
+          switch (opN2) {
+            case "+":
+              return v1N2 + v2N2;
+              break;
+            case "-":
+              return v1N2 - v2N2;
+              break;
+            case "*":
+              return v1N2 * v2N2;
+              break;
+            case "/":
+              if (v2N2 == 0) {
+                return "És impossible dividir per zero!!";
+                break;
+              } else {
+                return v1N2 / v2N2;
+                break;
+              }
+            default:
+              return "Quelcom ha sortit malament, verifica la informació aportada.";
+          }
+        }
+        document.getElementById("operadorN2").innerHTML =
+          "El teu operador és: " + operadorN2;
+        document.getElementById("num1N2").innerHTML =
+          "El teu primer número és: " + valor1N2;
+        document.getElementById("num2N2").innerHTML =
+          "El teu segon número és: " + valor2N2;
+        document.getElementById("resultatN2").innerHTML = resultatN2;
+      }
+
+      // Nivell 3
+    </script>
+  </body>
+</html>
