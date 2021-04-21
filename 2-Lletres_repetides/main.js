@@ -22,6 +22,8 @@ function ex2() {
       arrayNom[i] == "U"
     ) {
       console.log("He trobat una vocal: " + arrayNom[i]);
+    } else if (arrayNom[i].toUpperCase() == arrayNom[i].toLowerCase()) {
+      console.log("Els noms de persones no contenen el número: " + arrayNom[i]);
     } else {
       console.log("He trobat una consonant: " + arrayNom[i]);
     }
@@ -30,25 +32,60 @@ function ex2() {
 
 // exercici 3
 function ex3() {
-  let nom = window.prompt("Digues el teu nom:").toUpperCase();
-  let arrayNom = Array.from(nom);
-  let arrayOrd = arrayNom.sort();
-  let tempLletra;
+  // creem array a partir de prompt (string),
+  // ordenem alfabèticament
+  let arrayOrd = Array.from(
+    window.prompt("Digues el teu nom:").toUpperCase()
+  ).sort();
+  // assignem valor 1 com a base
   let tempValor = 1;
+  // creem el nou Map
   let lletresMap = new Map();
 
+  // loop per a comparar les lletres entre sí
   for (let i = 0; i < arrayOrd.length; i++) {
+    // si la posició i i la posició i+1 dins de l'array són iguals, sumem +1 al tempValor
     if (arrayOrd[i] == arrayOrd[i + 1]) {
       tempValor += 1;
     } else {
-      tempLletra = arrayOrd[i];
+      // si la posició i i la posició i+1 no coincideixen, fem un set amb la lletra i el valor final (repeticions)
+      let tempLletra = arrayOrd[i];
       lletresMap.set(tempLletra, tempValor);
+      // tornem al valor inicial d'1 per a ressetejar el comptador
       tempValor = 1;
     }
   }
-  for (let [key, value] of lletresMap) {
-    console.log(key + ": " + value);
-  }
+  //fem un log de l'objecte Map
+  console.log(lletresMap);
+
+  /*let nom = window.prompt("Digues el teu nom:").toUpperCase();
+  let arrayOrd = Array.from(nom).sort();
+  let tempValor = 1;
+  let tempLletra;
+  let previ = new Map();
+  let resultat = arrayOrd.map(ordena);
+  console.log(resultat);
+
+  function ordena() {
+    for (let i = 0; i < arrayOrd.length; i++) {
+      if (arrayOrd[i] == arrayOrd[i + 1]) {
+        tempValor += 1;
+      } else {
+        tempLletra = arrayOrd[i];
+        previ.set(tempLletra, tempValor);
+        tempValor = 1;
+      }
+    }
+    return previ;
+  }*/
+
+  /*let array3 = ["A", "L", "E", "J", "A", "N", "D", "R", "O"];
+  let letras = {};
+  array3.map(function (i) {
+    letras[i] = (letras[i] || 0) + 1;
+  });
+
+  console.log(letras);*/
 }
 
 // exercici 4

@@ -1,0 +1,67 @@
+body {
+  background-color: #000b08;
+}
+
+.navbar {
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(42, 83, 64, 0.15);
+}
+.navbar img {
+  max-height: 10vh;
+}
+.dropdown-menu {
+  background-color: #000b08;
+}
+.dropdown-item {
+  color: gray;
+}
+.dropdown-item:hover {
+  background-color: rgba(42, 83, 64, 0.1);
+  color: lightgray;
+}
+.carousel {
+  box-shadow: 0px 0px 20px 1px rgba(42, 83, 64, 0.15);
+}
+.modal-dialog {
+  background-color: #000b08;
+  box-shadow: 0px 0px 20px 1px rgba(42, 83, 64, 0.5);
+}
+.carousel .carousel-item {
+  height: 75vh;
+}
+
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 75vh;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  box-shadow: 0px 0px 20px 1px rgba(42, 83, 64, 0.15);
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.nav-link {
+  color: rgba(42, 83, 64, 0.8);
+}
+
+.nav-link:hover {
+  color: rgb(63, 121, 94);
+  background-color: rgba(42, 83, 64, 0.15);
+}
+
+.tab-content {
+  box-shadow: 0px 0px 20px 1px rgba(42, 83, 64, 0.15);
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
