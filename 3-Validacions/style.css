@@ -1,0 +1,42 @@
+.container {
+  height: 80vh;
+  padding: 30px;
+}
+
+.bodyregistre {
+  background-image: linear-gradient(
+    rgb(224, 180, 185),
+    rgb(220, 53, 69),
+    rgb(54, 13, 17)
+  );
+}
+
+.bodylogin {
+  background-image: linear-gradient(
+    rgb(201, 221, 206),
+    rgb(40, 167, 69),
+    rgb(11, 47, 20)
+  );
+}
+
+.bodybusca {
+  background-image: linear-gradient(
+    rgb(192, 223, 255),
+    rgb(0, 123, 255),
+    rgb(0, 30, 63)
+  );
+}
+
+.bodymain {
+  height: 100vh;
+  background-image: linear-gradient(#f8f9fa, #343a40);
+}
+.bodymain a {
+  height: 20vh;
+  font-size: 5rem;
+  margin: 9vh 0px;
+  line-height: 19vh;
+}
+.conmain {
+  height: 100vh;
+}
