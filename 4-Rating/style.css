@@ -26,6 +26,7 @@
   margin: 2vw;
   font-size: 12vw;
   color: rgb(75, 126, 117);
+  transition: 0.3s;
 }
 
 .icon:hover,
